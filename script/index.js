@@ -12,4 +12,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     grid.appendChild(btn)
   }
+
+  const resetBtn = document.getElementById('resetBtn')
+  if (resetBtn) {
+    resetBtn.addEventListener('click', () => {
+      document
+        .querySelectorAll('.number-btn.active')
+        .forEach((b) => b.classList.remove('active'))
+    })
+  }
 })
